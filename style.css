@@ -1,0 +1,78 @@
+/* Start Variables */
+:root {
+    /* Fonts */
+    --f1-font: 'Lexend Deca', sans-serif;
+    --f2-font: 'Big Shoulders Display', sans-serif;
+    /* Colors  */
+    --c1-color: hsl(31, 77%, 52%);
+    --c2-color: hsl(184, 100%, 22%);
+    --c3-color: hsl(179, 100%, 13%);
+    --p-color: hsla(0, 0%, 100%, 0.75);
+    --bg-h-btn-color: hsl(0, 0%, 95%);
+}
+/* End Variables */
+
+/* Start Global Rules */
+*{margin: 0; padding: 0; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
+html{background-color: var(--bg-h-btn-color);}
+body{
+    font-size: 15px;
+    min-height: 100vh; display: flex; justify-content: center; align-items: center;
+}
+/* End Global Rules */
+
+main{box-shadow: 0 0 1.675rem #05050524;}
+main .container{
+    width: 920px;   margin: 0 auto;
+    display: flex;  justify-content: space-between;
+}
+@media screen and (max-width: 1110px) {
+    main .container{
+        width: 325px;   flex-direction: column;
+    }
+}
+main .container .card-box{
+    width: 33.333333333%;   padding: 45px;
+}
+@media screen and (max-width: 1110px) {
+    main .container .card-box{
+        width: 100%;
+    }
+}
+main .container .card-box:nth-child(1){background-color: var(--c1-color);}   
+main .container .card-box:nth-child(2){
+    background-color: var(--c2-color);
+}
+main .container .card-box:nth-child(3){
+    background-color: var(--c3-color);
+}
+main .container .card-box img{
+    margin-bottom: 25px;
+}
+main .container .card-box h1{
+    text-transform: uppercase;  font-weight: 700;   font-family: var(--f2-font);    color: var(--bg-h-btn-color);
+    font-size: 2.1875rem;   margin-bottom: 25px;
+}
+main .container .card-box p{
+    font-family: var(--f1-font);    color: var(--p-color);
+    margin-bottom: 85px;    padding-right: 8px;
+}
+@media screen and (max-width: 1110px) {
+    main .container .card-box p{
+        margin-bottom: 25px; 
+    }
+}
+main .container .card-box button{
+    width: 145px;   height: 50px;   border: none;
+    background-color: var(--bg-h-btn-color);
+    padding: 10px 20px; border-radius: 30px;
+    text-align: center; cursor: pointer;
+    font-family: var(--f1-font); letter-spacing: 1px; font-size: 15.5px;   
+}
+main .container .card-box:nth-child(1) button{color: var(--c1-color);}
+main .container .card-box:nth-child(2) button{color: var(--c2-color);}
+main .container .card-box:nth-child(3) button{color: var(--c3-color);}
+main .container .card-box button:hover{
+    background-color: transparent;  color: var(--bg-h-btn-color);   border: 2px solid var(--bg-h-btn-color);
+    transition: all 0.4s;   
+}
